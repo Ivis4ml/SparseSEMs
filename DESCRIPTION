@@ -1,0 +1,15 @@
+Package: SparseSEMs
+Type: Package
+Title: Sparse Structural Equation Models for jointly inferring Gene Regulatory Networks
+Version: 0.1.0
+Author: Xin Zhou
+Maintainer: Xin Zhou <xxz220@miami.edu>
+Description: An optimizer of Fused-Sparse Structural Equation Models. State-of-the-art (sota) joint sparse aware maximum likelihood function for structural equation models. Fused sparse lasso penalty is included.
+License: GPL (>=3)
+Encoding: UTF-8
+LazyData: true
+Depends: methods
+Imports: Rcpp, Matrix, stats, plotly, igraph, mvtnorm, qtl, stringr, glmnet, MASS
+LinkingTo: Rcpp, RcppEigen
+RoxygenNote: 6.1.1
+NeedsCompilation: yes
