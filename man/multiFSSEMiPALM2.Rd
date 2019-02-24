@@ -58,5 +58,6 @@ fit List of FSSEM model
 }
 }
 \description{
-multiFSSEMiPALM2
+Implementing FSSELM algorithm for network inference. If Xs is identify for different conditions, multiFSSEMiPALM will be use, otherwise, please
+use `multiFSSEMiPALM2` for general cases
 }

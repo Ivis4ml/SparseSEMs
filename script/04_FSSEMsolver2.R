@@ -6,7 +6,7 @@ Nk = 30 * 3                                                           # eQTL num
 Ns = 30 / Ng                                                          # sparse ratio
 sigma2 = 0.01                                                         # sigma2
 set.seed(seed)
-library(SparseSEM)
+library(SparseSEMs)
 
 data = randomFSSEMdata(n = N, p = Ng, k = Nk, sparse = Ns, df = 0.3, sigma2 = sigma2, u = 5, type = "DG", nhub = 1, dag = T)
 ## data = randomFSSEMdata(n = N, p = Ng, k = Nk, sparse = Ns, df = 0.3, sigma2 = sigma2, u = 5, type = "ER", nhub = 1)

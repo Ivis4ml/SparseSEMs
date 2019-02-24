@@ -18,7 +18,8 @@ Ns = 1                                                                      # sp
 sigma2 = 0.01                                                               # sigma2
 set.seed(seed)
 library(SparseSEMs)
-data = randomFSSEMdata(n = N, p = Ng, k = Nk, sparse = Ns, df = 0.3, sigma2 = sigma2, u = 5, type = "DG", nhub = 1, dag = TRUE)
+data = randomFSSEMdata(n = N, p = Ng, k = Nk, sparse = Ns, df = 0.3, sigma2 = sigma2,
+                       u = 5, type = "DG", nhub = 1, dag = TRUE)
 gamma = cv.multiRegression(data$Data$X, data$Data$Y, data$Data$Sk, ngamma = 50, nfold = 5, N, Ng, Nk)
 fit   = multiRegression(data$Data$X, data$Data$Y, data$Data$Sk, gamma, N, Ng, Nk, trans = FALSE)
 Xs    = data$Data$X
@@ -33,7 +34,8 @@ cvfitc <- cv.multiFSSEMiPALM(Xs = Xs, Ys = Ys, Bs = fit$Bs, Fs = fit$Fs, Sk = Sk
 system.time(fitc <<- multiFSSEMiPALM(Xs = Xs, Ys = Ys, Bs = fit$Bs, Fs = fit$Fs, Sk = Sk,
                                      sigma2 = fit$sigma2, lambda = cvfitc$lambda, rho = cvfitc$rho,
                                      Wl = inverseB(fit$Bs), Wf = flinvB(fit$Bs),
-                                     p = Ng, maxit = 100, threshold = 1e-5, sparse = TRUE, verbose = TRUE, trans = TRUE, strict = TRUE))
+                                     p = Ng, maxit = 100, threshold = 1e-5, sparse = TRUE,
+                                     verbose = TRUE, trans = TRUE, strict = TRUE))
 (TPR(fitc$B[[1]], data$Vars$B[[1]]) + TPR(fitc$B[[2]], data$Vars$B[[2]])) / 2
 (FDR(fitc$B[[1]], data$Vars$B[[1]]) + FDR(fitc$B[[2]], data$Vars$B[[2]])) / 2
 TPR(fitc$B[[1]] - fitc$B[[2]], data$Vars$B[[1]] - data$Vars$B[[2]])

@@ -99,6 +99,8 @@ cv.multiRegression = function(Xs, Ys, Sk, ngamma = 20, nfold = 5, n, p, k) {
 
 ### FSSEM solver for multiple conditions, specified as two.
 ##' @title multiFSSEMiPALM
+##' @description Implementing FSSELM algorithm for network inference. If Xs is identify for different conditions, multiFSSEMiPALM will be use, otherwise, please
+##' use `multiFSSEMiPALM2` for general cases
 ##' @param Xs  eQTL matrices
 ##' @param Ys  Gene expression matrices
 ##' @param Bs  initialized GRN-matrices

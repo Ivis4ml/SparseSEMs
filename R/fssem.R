@@ -1,5 +1,7 @@
 ### FSSEM solver for multiple conditions and multiple eQTLs, specified as two.
 ##' @title multiFSSEMiPALM2
+##' @description Implementing FSSELM algorithm for network inference. If Xs is identify for different conditions, multiFSSEMiPALM will be use, otherwise, please
+##' use `multiFSSEMiPALM2` for general cases
 ##' @param Xs  eQTL matrices
 ##' @param Ys  Gene expression matrices
 ##' @param Bs  initialized GRN-matrices
