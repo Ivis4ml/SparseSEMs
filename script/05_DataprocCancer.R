@@ -563,3 +563,6 @@ for(n in 1:nrow(enrichedGS)) {
   cat(as.character(enrichedGS[n,1]), " & ", toupper(format(signif(enrichedGS[n,2], 2), scientific = T)), " \\\\ \n")
   cat("\\hline \n")
 }
+
+
+
